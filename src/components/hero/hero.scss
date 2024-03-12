@@ -1,3 +1,5 @@
+@import '../../assets/colors/colors.scss';
+
 .Hero_slider {
     background-color: black;
 
@@ -13,7 +15,7 @@
 
         button {
             margin-top: 25px;
-            background-color: rgba(255, 102, 0, 1);
+            background-color: $safety-orange-blaze-orange;
             padding: 10px 20px;
             border-radius: 5px;
             border: 0;

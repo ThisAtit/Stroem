@@ -28,8 +28,8 @@ const Navbar = () => {
                             <a className="nav-link" href="#Contact">KONTAKT OS</a>
                         </li>
                     </ul>
-                    <form class="form-inline ms-auto">
-                        <input class="form-control" type="search" placeholder="Søg" aria-label="Search" />
+                    <form className="form-inline ms-auto">
+                        <input className="form-control" type="search" placeholder="Søg" aria-label="Search" />
                     </form>
                 </section>
             </div>

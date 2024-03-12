@@ -1,0 +1,18 @@
+@import "./assets/colors/colors.scss";
+
+.TextThemeColor {
+    color: $safety-orange-blaze-orange;
+}
+
+.TextPrimaryThemeColor {
+    color: $sonic-silver;
+}
+
+.ButtonThemeStyle {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: $safety-orange-blaze-orange;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+}
