@@ -1,0 +1,56 @@
+@import '../../../assets/colors/colors.scss';
+
+#Footer_section {
+    padding-top: 50px;
+    background-color: rgb(65, 70, 86);
+    color: $cultured;
+
+    #Link_section {
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: $cultured;
+                }
+
+                a::before {
+                    content: '>';
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    #Form_section {
+        input {
+            border: 0;
+            border-radius: 5px;
+            background-color: $independence;
+        }
+
+        ::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+
+    #Copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.123);
+
+        #icons {
+            display: inline;
+            
+            i{
+                margin: 10px;
+                padding: 10px 12px;
+                border: 2px solid rgba(255, 255, 255, 0.123);
+                border-radius: 50%;
+            }
+        }
+    }
+}
