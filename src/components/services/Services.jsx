@@ -45,7 +45,7 @@ const Services = () => {
                         {/* ________________Image_____________________ */}
 
                         <figure className="col-md-5 mt-5">
-                            <img className="h-100" src={img1_Services} alt="Services image" />
+                            <img className="img-fluid" src={img1_Services} alt="Services image" />
                         </figure>
                     </article>
                 </article>
