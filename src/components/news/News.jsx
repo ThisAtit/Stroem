@@ -24,6 +24,7 @@ const News = () => {
             <article className="row text-center">
                 <h2>Sidste <span className="TextThemeColor">nyt</span></h2>
                 <p>Lorems ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
+                <p className="fs-4 TextGrey">——<span className="TextThemeColor fs-6 fw-bold">O</span>——</p>
                 <article className="row justify-content-center gap-5">
                     {
                         news.slice(0, 3).map((news, index) => (

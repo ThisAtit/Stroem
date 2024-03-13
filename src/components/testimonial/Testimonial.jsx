@@ -24,10 +24,11 @@ const Testimonial = () => {
                 <article className="row text-center pb-5">
                     <h2>Vores <span className="TextThemeColor">kunder siger</span></h2>
                     <p>Lorems ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
+                    <p className="fs-4 text-white-50">——<span className="TextThemeColor fs-6 fw-bold">O</span>——</p>
                 </article>
 
                 {/* _____________________________________ Content ________________________________________ */}
-                <article id="Testimonial_Card" className="row justify-content-center gap-5">
+                <article id="Testimonial_Card" className="row justify-content-center gap-5 overflow-x-scroll">
                         {
                             testimonials.map((testimonial, index) => (
                                 <article className="Testimonial_info col-lg-3 col-8 p-0 text-center" key={index}>
@@ -39,7 +40,7 @@ const Testimonial = () => {
 
                                     {/* _____________________________________________ Testimonial_text ________________________________________ */}
                                     <article className="Testimonial_text">
-                                        <section className="p-4">
+                                        <section className="pt-4 pb-4">
                                             <h4 className="text-danger">{testimonial.name}</h4>
                                             <h6 className="TextThemeColor">{testimonial.title}</h6>
                                             <p className="mt-3 TextPrimaryThemeColor">{testimonial.review.split(" ").slice(0, 15).join(" ")}</p>

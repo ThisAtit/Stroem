@@ -3,7 +3,7 @@ import "./navbar.scss";
 const Navbar = () => {
     return (
         <article className="container">
-            <nav className="navbar navbar-expand-lg p-2 pe-3 ps-3">
+            <nav className="navbar navbar-expand-md p-2 pe-3 ps-3">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

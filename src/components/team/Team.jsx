@@ -23,6 +23,7 @@ const Team = () => {
             <article className="row text-center">
                 <h2>Vores <span className="TextThemeColor">team</span></h2>
                 <p>Lorems ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
+                <p className="fs-4 TextGrey">——<span className="TextThemeColor fs-6 fw-bold">O</span>——</p>
                 {
                     teams.map((team, index) => (
                         <figure className="col-md-3 col-6 mt-4 p-4 TeamImg" key={index}>

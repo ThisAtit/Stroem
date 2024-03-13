@@ -5,15 +5,27 @@ import sliderImg2 from "../../assets/img/slider/2.jpg";
 
 const Hero = () => {
     return (
-        <article className="Hero_slider">
-            <Carousel>
+        <article className="Hero_slider d-lg-block d-none">
+            <Carousel fade indicators={false}>
                 <Carousel.Item>
                     <figure>
                         <img className="d-block w-100" src={sliderImg2} alt="slider-Img-2" />
                         <figcaption className="carousel-caption d-none d-md-block" >
                             <section className="text-center">
                                 <h2>Hurtig service</h2>
-                                <p>når du skal bruge det</p>
+                                <p>Når du skal bruge det</p>
+                                <button>KONTAKT OS</button>
+                            </section>
+                        </figcaption>
+                    </figure>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <figure>
+                        <img className="d-block w-100" src={sliderImg1} alt="slider-Img-1" />
+                        <figcaption className="carousel-caption d-none d-md-block" >
+                            <section className="text-center">
+                                <h2>Bedste priser</h2>
+                                <p>Vi matcher alle</p>
                                 <button>KONTAKT OS</button>
                             </section>
                         </figcaption>

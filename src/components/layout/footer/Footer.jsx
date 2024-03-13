@@ -8,7 +8,7 @@ const Footer = () => {
             <article className="container">
                 <article className="row">
                     {/* _________________________________________ logo_section _____________________________________ */}
-                    <figure className="col-md-3 mt-4">
+                    <figure className="col-lg-3 col-md-6 mt-4">
                         <Link to="/" className="logo-link">
                             <img src={logo} alt="Stroem Logo" className="logo" />
                         </Link>
@@ -19,7 +19,7 @@ const Footer = () => {
 
 
                     {/* _________________________________________ Link_section _____________________________________ */}
-                    <section id="Link_section" className="col-md-2 offset-md-1 mt-4">
+                    <section id="Link_section" className="col-lg-2 offset-md-1 col-md-5  mt-4">
                         <h3>Link</h3>
                         <ul>
                             <li><a href="#">FAQ</a></li>
@@ -30,7 +30,7 @@ const Footer = () => {
                     </section>
 
                     {/* _________________________________________ Kontakt_section _____________________________________ */}
-                    <section className="col-md-3 mt-4">
+                    <section className="col-lg-3 col-md-6 mt-4">
                         <h3>Kontakt os</h3>
                         <section className="mt-3">
                             <p><b className="me-3">Adresse:</b> Strømparken 1, 8500 grenaa</p>
@@ -40,7 +40,7 @@ const Footer = () => {
                     </section>
 
                     {/* _________________________________________ Form_section _____________________________________ */}
-                    <section className="col-md-3 mt-4">
+                    <section className="col-lg-3 offset-lg-0 offset-md-1 col-md-5 mt-4">
                         <form id="Form_section">
                             <h3>Nyhedsbrev</h3>
                             <p className="mt-3">Tilmeld dig vores hyhedsbrev her</p>
@@ -55,15 +55,15 @@ const Footer = () => {
             </article>
             <article id="Copyright" className="mt-5 p-3">
                 <article className="container">
-                    <article className="row mt-3">
-                        <section className="col-3">
+                    <article className="row mt-3 text-md-start text-center">
+                        <section className="col-md-5">
                             <p><span className="TextThemeColor">Strøm</span> © 2017 All Right Reserved</p>
                         </section>
-                        <section id="icons" className="ms-auto col-3">
-                            <i className="bi bi-facebook"></i>
-                            <i className="bi bi-twitter"></i>
-                            <i className="bi bi-globe"></i>
-                            <i className="bi bi-linkedin"></i>
+                        <section id="icons" className="ms-auto col-md-5 text-md-end text-center">
+                            <a href="#"><i className="bi bi-facebook text-white"></i></a>
+                            <a href="#"><i className="bi bi-twitter text-white"></i></a>
+                            <a href="#"><i className="bi bi-globe text-white"></i></a>
+                            <a href="#"><i className="bi bi-linkedin text-white"></i></a>
                         </section>
                     </article>
                 </article>

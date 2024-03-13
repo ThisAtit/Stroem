@@ -5,7 +5,7 @@ const Bookingservice = () => {
         <article id="Bookingservice">
             <form className="container">
                 <article className="row pt-3">
-                    <section className="col-md-2">
+                    <section className="col-md-3 text-md-start text-center">
                         <h3><span className="TextThemeColor">Book</span><br />service nu</h3>
                     </section>
                     <section className="offset-md-1 col-md-2">
@@ -20,7 +20,9 @@ const Bookingservice = () => {
                         <label htmlFor="phone"></label>
                         <input className="w-100 mt-2" type="tel" id="phone" name="phone" placeholder="Telefon nr." required />
                     </section>
-                    <button type="submit" className="ButtonThemeStyle col-md-1 mt-2">SEND</button>
+                    <section className="text-md-start text-center col-md-2">
+                        <button type="submit" className="ButtonThemeStyle mt-2 col-9">SEND</button>
+                    </section>
                 </article>
             </form>
         </article>

@@ -1,4 +1,13 @@
 @import "./assets/colors/colors.scss";
+@font-face {
+    font-family: "fontawesome";
+    src: url("../src/assets/Fonts/fontawesome-webfont.ttf");
+}
+
+@font-face {
+    font-family: "glyphicons";
+    src: url("../src/assets/Fonts/glyphicons-halflings-regular.ttf");
+}
 
 .TextThemeColor {
     color: $safety-orange-blaze-orange;
@@ -10,6 +19,10 @@
 
 .TextSecondaryThemeColor {
     color: $cultured;
+}
+
+.TextGrey {
+    color: $gainsboro;
 }
 
 .ButtonThemeStyle {

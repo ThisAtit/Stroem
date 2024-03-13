@@ -1,30 +1,38 @@
 @import '../../assets/colors/colors.scss';
 
 .Hero_slider {
-    background-color: black;
+    background-color: $eerie-black;
+    
+
+    .carousel-item{
+        transition: 2s ease-in-out;
+    }
 
     img {
-        opacity: 0.3;
+        opacity: 0.4;
 
     }
 
     figcaption {
-        margin-bottom: 11%;
+        margin-bottom: 100px;
 
         h2 {
-            font-size: 45px;
-            font-weight: bold;
+            font-size: 80px;
+        }
+
+        p {
+            padding-top: 5px;
+            font-size: 24px;
         }
 
         button {
-            margin-top: 25px;
+            margin-top: 45px;
             background-color: $safety-orange-blaze-orange;
-            padding: 10px 20px;
+            padding: 18px 50px;
             border-radius: 5px;
             border: 0;
             color: white;
             font-weight: bold;
         }
     }
-
 }
