@@ -60,10 +60,10 @@ const Footer = () => {
                             <p><span className="TextThemeColor">Strøm</span> © 2017 All Right Reserved</p>
                         </section>
                         <section id="icons" className="ms-auto col-3">
-                            <i class="bi bi-facebook"></i>
-                            <i class="bi bi-twitter"></i>
-                            <i class="bi bi-globe"></i>
-                            <i class="bi bi-linkedin"></i>
+                            <i className="bi bi-facebook"></i>
+                            <i className="bi bi-twitter"></i>
+                            <i className="bi bi-globe"></i>
+                            <i className="bi bi-linkedin"></i>
                         </section>
                     </article>
                 </article>

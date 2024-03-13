@@ -27,7 +27,7 @@ const News = () => {
                 <article className="row justify-content-center gap-5">
                     {
                         news.slice(0, 3).map((news, index) => (
-                            <article className="col-md-3 News_section p-0" key={index}>
+                            <article className="col-lg-3 col-10 News_section p-0" key={index}>
                                 <figure>
                                     <img className="w-100" src={`http://localhost:5333/images/news/${news.image}`} alt={news.title} />
                                     <figcaption className="text-start p-4">

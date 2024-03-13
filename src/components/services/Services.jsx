@@ -34,17 +34,23 @@ const Services = () => {
                             <article className="row mt-5">
                                 {
                                     services.map((service, index) => (
-                                        <section className="col-md-6" key={index}>
-                                            <h3>{service.title}</h3>
-                                            <p className="TextPrimaryThemeColor">{service.teaser}</p>
-                                        </section>
+                                        <>
+                                            <section className="col-lg-2 col-2 mt-4 text-center">
+                                                {/* <i class="bi bi-lamp TextThemeColor"></i> */}
+                                                <i class={service.icon}></i>
+                                            </section>
+                                            <section className="col-lg-4 col-10 mt-4" key={index}>
+                                                <h3>{service.title}</h3>
+                                                <p className="TextPrimaryThemeColor">{service.teaser.split(" ").slice(0, 24).join(" ")}</p>
+                                            </section>
+                                        </>
+
                                     ))
                                 }
                             </article>
                         </section>
                         {/* ________________Image_____________________ */}
-
-                        <figure className="col-md-5 mt-5">
+                        <figure className="col-md-5 mt-5 m-0">
                             <img className="img-fluid" src={img1_Services} alt="Services image" />
                         </figure>
                     </article>
