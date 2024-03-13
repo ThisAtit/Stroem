@@ -8,9 +8,9 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <section className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link" href="#Homepage">FORSIDE</a>
+                    <ul className="navbar-nav ">
+                        <li className="nav-item ">
+                            <a className="nav-link TextThemeColor" href="#Homepage">FORSIDE</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#About">OM OS</a>

@@ -26,7 +26,7 @@ const Team = () => {
                 <p className="fs-4 TextGrey">——<span className="TextThemeColor fs-6 fw-bold">O</span>——</p>
                 {
                     teams.map((team, index) => (
-                        <figure className="col-md-3 col-6 mt-4 p-4 TeamImg" key={index}>
+                        <figure className="col-md-3 col-6 mt-4 ps-4 pe-4 TeamImg" key={index}>
                             <img className="w-100" src={`http://localhost:5333/images/team/${team.image}`} alt={team.title} />
                             <figcaption className="mainFigcaption TextSecondaryThemeColor pb-4">
                                 <h3>{team.name}</h3>

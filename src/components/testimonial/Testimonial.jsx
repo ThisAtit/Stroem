@@ -40,7 +40,7 @@ const Testimonial = () => {
 
                                     {/* _____________________________________________ Testimonial_text ________________________________________ */}
                                     <article className="Testimonial_text">
-                                        <section className="pt-4 pb-4">
+                                        <section className="p-4">
                                             <h4 className="text-danger">{testimonial.name}</h4>
                                             <h6 className="TextThemeColor">{testimonial.title}</h6>
                                             <p className="mt-3 TextPrimaryThemeColor">{testimonial.review.split(" ").slice(0, 15).join(" ")}</p>

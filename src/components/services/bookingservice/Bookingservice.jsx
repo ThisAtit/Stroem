@@ -1,9 +1,33 @@
 import "./bookingservice.scss";
 
 const Bookingservice = () => {
+    const fetchData = async (fd) => {
+        try {
+            const result = await fetch('http://localhost:5333/booking', {
+                method: 'POST',
+                body: fd
+            }
+            );
+            const data = await result.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log("submit")
+        const fd = new FormData(e.target)
+
+        alert("Tak fordi du har booket hos os!")
+        window.location.reload()
+
+        fetchData(fd);
+    }
+
     return (
         <article id="Bookingservice">
-            <form className="container">
+            <form className="container" onSubmit={handleSubmit}>
                 <article className="row pt-3">
                     <section className="col-md-3 text-md-start text-center">
                         <h3><span className="TextThemeColor">Book</span><br />service nu</h3>

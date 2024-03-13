@@ -14,7 +14,7 @@ const Hero = () => {
                             <section className="text-center">
                                 <h2>Hurtig service</h2>
                                 <p>Når du skal bruge det</p>
-                                <button>KONTAKT OS</button>
+                                <button className="ButtonThemeStyle">KONTAKT OS</button>
                             </section>
                         </figcaption>
                     </figure>
@@ -26,7 +26,7 @@ const Hero = () => {
                             <section className="text-center">
                                 <h2>Bedste priser</h2>
                                 <p>Vi matcher alle</p>
-                                <button>KONTAKT OS</button>
+                                <button className="ButtonThemeStyle">KONTAKT OS</button>
                             </section>
                         </figcaption>
                     </figure>

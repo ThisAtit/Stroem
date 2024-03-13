@@ -28,14 +28,19 @@ const News = () => {
                 <article className="row justify-content-center gap-5">
                     {
                         news.slice(0, 3).map((news, index) => (
-                            <article className="col-lg-3 col-10 News_section p-0" key={index}>
-                                <figure>
-                                    <img className="w-100" src={`http://localhost:5333/images/news/${news.image}`} alt={news.title} />
-                                    <figcaption className="text-start p-4">
-                                        <h4>{news.title}</h4>
-                                        <p className="mt-3 TextPrimaryThemeColor">{news.content.split(" ").slice(0, 20).join(" ")}...</p>
-                                    </figcaption>
-                                </figure>
+                            <article className="col-lg-3 col-10 News_content p-0" key={index}>
+                                <a href="#" className="text-decoration-none">
+                                    <figure>
+                                        <img className="w-100" src={`http://localhost:5333/images/news/${news.image}`} alt={news.title} />
+                                        <figcaption className="Figcaption_date">
+
+                                        </figcaption>
+                                        <figcaption className="text-start p-4 text-black">
+                                            <h4>{news.title}</h4>
+                                            <p className="mt-3 TextPrimaryThemeColor">{news.content.split(" ").slice(0, 20).join(" ")}...</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
                             </article>
                         ))
                     }

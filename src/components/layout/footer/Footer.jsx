@@ -3,6 +3,30 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/img/logo.png";
 
 const Footer = () => {
+    const fetchData = async (fd) => {
+        try {
+            const result = await fetch('http://localhost:5333/newssubscription', {
+                method: 'POST',
+                body: fd
+            }
+            );
+            const data = await result.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log("submit")
+        const fd = new FormData(e.target)
+
+        alert("Din email er blevet registreret til vores nyhedsbrev :)")
+        window.location.reload()
+
+        fetchData(fd);
+    }
+
     return (
         <footer id="Footer_section">
             <article className="container">
@@ -41,7 +65,7 @@ const Footer = () => {
 
                     {/* _________________________________________ Form_section _____________________________________ */}
                     <section className="col-lg-3 offset-lg-0 offset-md-1 col-md-5 mt-4">
-                        <form id="Form_section">
+                        <form id="Form_section" onSubmit={handleSubmit}>
                             <h3>Nyhedsbrev</h3>
                             <p className="mt-3">Tilmeld dig vores hyhedsbrev her</p>
                             <section id="FormInput_section">
@@ -53,6 +77,8 @@ const Footer = () => {
                     </section>
                 </article>
             </article>
+
+            {/* _________________________________________ Copyright_section _____________________________________ */}
             <article id="Copyright" className="mt-5 p-3">
                 <article className="container">
                     <article className="row mt-3 text-md-start text-center">
@@ -60,10 +86,10 @@ const Footer = () => {
                             <p><span className="TextThemeColor">Strøm</span> © 2017 All Right Reserved</p>
                         </section>
                         <section id="icons" className="ms-auto col-md-5 text-md-end text-center">
-                            <a href="#"><i className="bi bi-facebook text-white"></i></a>
-                            <a href="#"><i className="bi bi-twitter text-white"></i></a>
-                            <a href="#"><i className="bi bi-globe text-white"></i></a>
-                            <a href="#"><i className="bi bi-linkedin text-white"></i></a>
+                            <a href="#"><i className="bi bi-facebook"></i></a>
+                            <a href="#"><i className="bi bi-twitter"></i></a>
+                            <a href="#"><i className="bi bi-globe"></i></a>
+                            <a href="#"><i className="bi bi-linkedin"></i></a>
                         </section>
                     </article>
                 </article>

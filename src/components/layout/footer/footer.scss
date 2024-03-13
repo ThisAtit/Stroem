@@ -16,11 +16,16 @@
                 a {
                     text-decoration: none;
                     color: $cultured;
+                    transition: 0.2s ease-in-out;
                 }
 
                 a::before {
                     content: '>';
                     margin-right: 5px;
+                }
+
+                a:hover {
+                    color: $safety-orange-blaze-orange;
                 }
             }
         }
@@ -50,6 +55,15 @@
                 padding: 10px 12px;
                 border: 2px solid rgba(255, 255, 255, 0.123);
                 border-radius: 50%;
+                transition: 0.4s ease-in-out;
+                color: white;
+
+            }
+
+            i:hover {
+                border: 2px solid rgb(255, 255, 255);
+                color: $safety-orange-blaze-orange;
+                background-color: white;
             }
         }
     }
