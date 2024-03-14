@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
 
@@ -35,7 +36,9 @@ const About = () => {
                             </>
                         )
                     }
-                    <button className="mb-5 ButtonThemeStyle">LÆS MERE</button>
+                    <Link to="/about">
+                        <button className="mb-5 ButtonThemeStyle">LÆS MERE</button>
+                    </Link>
                 </section>
             </article>
         </article>

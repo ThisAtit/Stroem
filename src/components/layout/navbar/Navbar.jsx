@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -10,22 +11,25 @@ const Navbar = () => {
                 <section className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ">
                         <li className="nav-item ">
-                            <a className="nav-link TextThemeColor" href="#Homepage">FORSIDE</a>
+                            <Link className="nav-link" to="/">FORSIDE</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#About">OM OS</a>
+                            <Link className="nav-link" to="/About">OM OS</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#Service">SERVICE</a>
+                            <Link className="nav-link" to="/Service">SERVICE</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#Faq">FAQ</a>
+                            <Link className="nav-link" to="/Faq">FAQ</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#News">NYHEDER</a>
+                            <Link className="nav-link" to="/News">NYHEDER</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#Contact">KONTAKT OS</a>
+                            <Link className="nav-link" to="/contact">KONTAKT OS</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link d-lg-block d-md-none d-block" to="/admin">ADMIN</Link>
                         </li>
                     </ul>
                     <form className="form-inline ms-auto">

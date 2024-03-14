@@ -46,7 +46,7 @@ const News = () => {
                     }
                 </article>
                 <section>
-                    <button type="submit" className="ButtonThemeStyle col-6 col-md-4 col-lg-3 mt-4">FLERE NYHEDER ...</button>
+                    <button className="ButtonThemeStyle col-6 col-md-4 col-lg-3 mt-4">FLERE NYHEDER ...</button>
                 </section>
             </article>
         </article>
