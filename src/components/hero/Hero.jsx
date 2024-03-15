@@ -1,5 +1,8 @@
 import "./hero.scss";
+
 import { Carousel } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+
 import sliderImg1 from "../../assets/img/slider/1.jpg";
 import sliderImg2 from "../../assets/img/slider/2.jpg";
 
@@ -14,7 +17,9 @@ const Hero = () => {
                             <section className="text-center">
                                 <h2>Hurtig service</h2>
                                 <p>Når du skal bruge det</p>
-                                <button className="ButtonThemeStyle">KONTAKT OS</button>
+                                <Link to="/contact">
+                                    <button className="ButtonThemeStyle">KONTAKT OS</button>
+                                </Link>
                             </section>
                         </figcaption>
                     </figure>
@@ -26,7 +31,9 @@ const Hero = () => {
                             <section className="text-center">
                                 <h2>Bedste priser</h2>
                                 <p>Vi matcher alle</p>
-                                <button className="ButtonThemeStyle">KONTAKT OS</button>
+                                <Link to="/contact">
+                                    <button className="ButtonThemeStyle">KONTAKT OS</button>
+                                </Link>
                             </section>
                         </figcaption>
                     </figure>

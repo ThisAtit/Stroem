@@ -1,0 +1,33 @@
+/* SCSS RGB */
+/* SCSS Gradient */
+.News_content {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.089);
+  border-radius: 10px;
+  transition: 0.6s ease-in-out;
+}
+.News_content img {
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.News_content figure {
+  position: relative;
+}
+.News_content figure .Figcaption_date {
+  position: absolute;
+  width: 60px;
+  padding: 15px 0 35px 0;
+  font-size: 18px;
+  top: 15px;
+  left: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  background-color: rgb(255, 102, 0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0% 100%);
+}
+
+.News_content:hover {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=news.css.map */

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const About = () => {
-
     const [about, setAbout] = useState([]);
 
     useEffect(() => {
@@ -18,7 +17,6 @@ const About = () => {
 
         fetchData();
     }, []);
-
 
     return (
         <article id="About_section" className="container">

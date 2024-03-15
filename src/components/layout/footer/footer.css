@@ -1,0 +1,56 @@
+/* SCSS RGB */
+/* SCSS Gradient */
+#Footer_section {
+  padding-top: 50px;
+  background-color: rgb(65, 70, 86);
+  color: rgb(248, 248, 250);
+}
+#Footer_section #Link_section ul {
+  padding: 0;
+}
+#Footer_section #Link_section ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+#Footer_section #Link_section ul li a {
+  text-decoration: none;
+  color: rgb(248, 248, 250);
+  transition: 0.2s ease-in-out;
+}
+#Footer_section #Link_section ul li a::before {
+  content: ">";
+  margin-right: 5px;
+}
+#Footer_section #Link_section ul li a:hover {
+  color: rgb(255, 102, 0);
+}
+#Footer_section #Form_section input {
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(71, 75, 90);
+}
+#Footer_section #Form_section ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+#Footer_section #Form_section ::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+#Footer_section #Copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.123);
+}
+#Footer_section #Copyright #icons {
+  display: inline;
+}
+#Footer_section #Copyright #icons i {
+  margin: 10px;
+  padding: 10px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.123);
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+  color: white;
+}
+#Footer_section #Copyright #icons i:hover {
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 102, 0);
+  background-color: white;
+}/*# sourceMappingURL=footer.css.map */

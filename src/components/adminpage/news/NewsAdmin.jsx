@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
 const NewsAdmin = () => {
     const [news, setNews] = useState([]);
 
@@ -41,6 +40,12 @@ const NewsAdmin = () => {
         }
     };
 
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const options = { day: 'numeric', month: 'short' };
+        return date.toLocaleDateString('en-US', options);
+    };
+
     return (
         <>
             <article className="container mt-5 mb-5">
@@ -48,6 +53,7 @@ const NewsAdmin = () => {
                     <h2>Sidste <span className="TextThemeColor">nyt</span></h2>
                     <p>Lorems ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
                     <p className="fs-4 TextGrey">——<span className="TextThemeColor fs-6 fw-bold">O</span>——</p>
+
                     <article className="row justify-content-center gap-5">
                         {
                             news.map((news, index) => (
@@ -56,7 +62,7 @@ const NewsAdmin = () => {
                                         <figure>
                                             <img className="w-100" src={`http://localhost:5333/images/news/${news.image}`} alt={news.title} />
                                             <figcaption className="Figcaption_date">
-
+                                                {formatDate(news.received)}
                                             </figcaption>
                                             <figcaption className="text-start p-4 text-black">
                                                 <h4>{news.title}</h4>

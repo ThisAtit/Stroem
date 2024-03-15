@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./news.scss";
 import { useEffect, useState } from "react";
 
@@ -19,12 +20,19 @@ const News = () => {
         fetchData();
     }, []);
 
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const options = { day: 'numeric', month: 'short' };
+        return date.toLocaleDateString('en-US', options);
+    };
+
     return (
         <article className="container mt-5 mb-5">
             <article className="row text-center">
                 <h2>Sidste <span className="TextThemeColor">nyt</span></h2>
                 <p>Lorems ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
                 <p className="fs-4 TextGrey">——<span className="TextThemeColor fs-6 fw-bold">O</span>——</p>
+
                 <article className="row justify-content-center gap-5">
                     {
                         news.slice(0, 3).map((news, index) => (
@@ -33,7 +41,7 @@ const News = () => {
                                     <figure>
                                         <img className="w-100" src={`http://localhost:5333/images/news/${news.image}`} alt={news.title} />
                                         <figcaption className="Figcaption_date">
-
+                                            {formatDate(news.received)}
                                         </figcaption>
                                         <figcaption className="text-start p-4 text-black">
                                             <h4>{news.title}</h4>
@@ -45,9 +53,9 @@ const News = () => {
                         ))
                     }
                 </article>
-                <section>
+                <Link to="/news">
                     <button className="ButtonThemeStyle col-6 col-md-4 col-lg-3 mt-4">FLERE NYHEDER ...</button>
-                </section>
+                </Link>
             </article>
         </article>
     );
