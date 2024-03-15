@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./components/home/Home";
 import Adminpage from "./components/adminpage/Adminpage";
-import EditNews from "./components/adminpage/editnews/EditNews";
-import AddNews from "./components/adminpage/addnews/AddNews";
-import EditAbout from "./components/adminpage/editabout/EditAbout";
+import EditNews from "./components/adminpage/news/EditNews";
+import AddNews from "./components/adminpage/news/AddNews";
+import EditAbout from "./components/adminpage/about/EditAbout";
 import AboutPage from "./components/pages/aboutpage/AboutPage";
 
 const App = () => {
