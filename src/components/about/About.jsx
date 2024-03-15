@@ -29,10 +29,6 @@ const About = () => {
                             <>
                                 <h2>Lidt om <span className="TextThemeColor">STRØM</span></h2>
                                 <p>{about.teaser}</p>
-                                {/* <p dangerouslySetInnerHTML={{ __html: about.content }}></p> */}
-                                {/* <figure>
-                                    <img src={`http://localhost:5333/images/about/${about.image}`} alt={about.title} />
-                                </figure> */}
                             </>
                         )
                     }

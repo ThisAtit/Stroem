@@ -6,7 +6,6 @@ const Adminpage = () => {
     const [about, setAbout] = useState([]);
     const [booking, setBooking] = useState([]);
 
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -72,6 +71,48 @@ const Adminpage = () => {
             }
         }
     };
+
+    const handleAccept = async (id, status) => {
+        try {
+            const fd = new FormData()
+            fd.append("accept", status)
+
+            const response = await fetch(`http://localhost:5333/booking/accept/admin/${id}`, {
+                method: 'PATCH',
+                body: fd
+            });
+
+            if (response.ok) {
+                window.location.reload();
+            } else {
+                console.error('Failed to accept');
+            }
+
+        } catch (error) {
+            console.error('Error accept booking:', error);
+        }
+    }
+
+    const handleUpdateNote = async (event, id) => {
+        event.preventDefault()
+
+        try {
+            const formData = new FormData(event.target);
+            const response = await fetch(`http://localhost:5333/booking/note/admin/${id}`, {
+                method: 'PATCH',
+                body: formData
+            });
+
+            if (response.ok) {
+                window.location.reload();
+            } else {
+                console.error('Failed to update note');
+            }
+        } catch (error) {
+            console.error('Error updating note:', error);
+        }
+    };
+
 
     return (
         <>
@@ -163,12 +204,26 @@ const Adminpage = () => {
                                     <td className="border">{bookings.name}</td>
                                     <td className="border">{bookings.email}</td>
                                     <td className="border">{bookings.phone}</td>
-                                    <td className="border">{bookings.note}</td>
+
+                                    {/* ________________________________________________ Note ____________________________________________________ */}
                                     <td className="border">
-                                        <button className={`btn ${booking.accept ? 'btn-success' : 'btn-danger'}`}>
-                                            {booking.accept ? 'Accepted' : 'Not Accepted'}
+                                        <form onSubmit={e => handleUpdateNote(e, bookings._id)} >
+                                            <textarea className="col-12" name="note" defaultValue={bookings.note} placeholder={bookings.note} rows="5" />
+                                            <button className="btn btn-warning text-white col-12" type="submit">Update Note</button>
+                                        </form>
+                                    </td>
+
+                                    {/* ________________________________________________ Accept ____________________________________________________ */}
+                                    <td className="border">
+                                        <button onClick={() => handleAccept(bookings._id, !bookings.accept)} className="btn btn-primary mb-2">
+                                            Skift status
+                                        </button>
+                                        <button className={`btn ${bookings.accept ? 'btn-success' : 'btn-danger'}`}>
+                                            {bookings.accept ? 'Accepted' : 'Not Accepted'}
                                         </button>
                                     </td>
+
+                                    {/* ________________________________________________ Delete ____________________________________________________ */}
                                     <td className="border">
                                         <button className="btn btn-danger mt-2" onClick={() => handleDeleteBooking(bookings._id)}>Delete</button>
                                     </td>

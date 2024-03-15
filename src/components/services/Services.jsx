@@ -2,6 +2,7 @@ import "./services.scss";
 import img1_Services from "../../assets/img/about/1.png";
 import Bookingservice from "./bookingservice/Bookingservice";
 import React, { useEffect, useState } from "react";
+import "../../assets/Fonts/_flaticon.scss";
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -38,8 +39,7 @@ const Services = () => {
                                     services.map((service, index) => (
                                         <React.Fragment key={index}>
                                             <section className="col-lg-2 col-2 mt-4">
-                                                {/* <i className="bi bi-lamp TextThemeColor"></i> */}
-                                                <i className={service.icon}></i>
+                                                <i className={service.icon + " fi TextThemeColor"}></i>
                                             </section>
                                             <section className="col-lg-4 col-md-4 col-10 mt-4">
                                                 <a href="#" className="text-decoration-none text-black"><h3>{service.title}</h3></a>
